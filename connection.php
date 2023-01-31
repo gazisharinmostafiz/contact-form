@@ -13,6 +13,7 @@
         $stmt->bind_param("ssss",$firstname,$lastname,$country,$subject);
         $stmt->execute();
         echo "sent successfully..";
+        header("Location: index.html");
         $stmt->close();
         $conn->close();
     }
